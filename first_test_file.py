@@ -16,7 +16,9 @@ if resp.status_code != 200:
 
 print (resp)
 print (resp.status_code)
-print (resp.json())
+
+response = resp.json()
+print (response['items'][0]['name']['firstName'])
 
 # for todo_item in resp.json():
 #
